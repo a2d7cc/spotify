@@ -1,8 +1,8 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react'
 
 interface FileUploadProps {
-    setFile: Function;
-    accept: string;
+    setFile: Function,
+    accept: string
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({setFile, accept, children}) => {
@@ -12,18 +12,12 @@ const FileUpload: React.FC<FileUploadProps> = ({setFile, accept, children}) => {
         setFile(e.target.files[0])
     }
 
-    return (
-        <div onClick={() => ref.current.click()}>
-            <input
-                type="file"
-                accept={accept}
-                style={{display: "none"}}
-                ref={ref}
-                onChange={onChange}
-            />
-            {children}
-        </div>
-    );
-};
+  return (
+    <div onClick={() => ref.current.click()}>
+        <input type="file"  accept={accept} style={{display: "none"}} ref={ref} onChange={onChange} />
+        {children}
+    </div>
+  )
+}
 
-export default FileUpload;
+export default FileUpload

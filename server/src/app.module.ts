@@ -8,7 +8,7 @@ import {ServeStaticModule} from "@nestjs/serve-static";
 @Module({
     imports: [
         ServeStaticModule.forRoot({rootPath: path.resolve(__dirname, 'static')}),
-        MongooseModule.forRoot('mongodb+srv://admin:admin@cluster0.oeudk.mongodb.net/music-platform?retryWrites=true&w=majority'),
+        MongooseModule.forRoot('mongodb+srv://root:root@cloud-app.pjbmf.mongodb.net/?retryWrites=true&w=majority'),
         TrackModule,
         FileModule
     ]
